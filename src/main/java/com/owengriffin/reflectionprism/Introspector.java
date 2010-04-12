@@ -15,15 +15,13 @@ public class Introspector {
     private static final Logger logger = LoggerFactory.getLogger(Introspector.class);
 
     public static String decapitalize(String name) {
-        if (name == null || name.length() == 0) {
-            return name;
+        if (name == null || "".equals(name)) {
+            return null;
         }
         if (name.length() > 1 && Character.isUpperCase(name.charAt(1)) && Character.isUpperCase(name.charAt(0))) {
             return name;
         }
-        char chars[] = name.toCharArray();
-        chars[0] = Character.toLowerCase(chars[0]);
-        return new String(chars);
+        return name.substring(0,1).toLowerCase() + name.substring(1);
     }
 
     public static BeanInfo getBeanInfo(Class<? extends Object> clazz) throws IntrospectionException {
