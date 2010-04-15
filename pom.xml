@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.owengriffin</groupId>
     <artifactId>reflection-prism</artifactId>
-    <version>0.1</version>
+    <version>0.1-SNAPSHOT</version>
     <name>reflection-prism</name>
     <packaging>jar</packaging>
     <description>Implementation of some missing reflection APIs in Android.</description>
@@ -15,6 +15,12 @@
     </prerequisites>
 
     <inceptionYear>2010</inceptionYear>
+    
+    <scm>
+        <connection>scm:git:git://github.com/owengriffin/android-reflection.git</connection>
+        <url>scm:git:git://github.com/owengriffin/android-reflection.git</url>
+        <developerConnection>scm:git:git://github.com/owengriffin/android-reflection.git</developerConnection>
+    </scm>
 
     <build>
         <plugins>
@@ -24,6 +30,10 @@
                     <source>1.5</source>
                     <target>1.5</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
@@ -41,3 +51,4 @@
         </dependency>
     </dependencies>
 </project>
+
