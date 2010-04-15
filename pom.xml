@@ -14,7 +14,7 @@
     </prerequisites>
 
     <inceptionYear>2010</inceptionYear>
-    
+
     <scm>
         <connection>scm:git:git://github.com/owengriffin/android-reflection.git</connection>
         <url>scm:git:git://github.com/owengriffin/android-reflection.git</url>
@@ -49,5 +49,19 @@
             <version>1.8.3</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>owengriffin.com</id>
+            <name>Repository Name</name>
+            <url>scp://owengriffin.com/home/ogriffin/owengriffin.com/public/maven/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>owengriffin.com</id>
+            <name>Repository Name</name>
+            <url>scp://owengriffin.com/home/ogriffin/owengriffin.com/public/maven/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
 
