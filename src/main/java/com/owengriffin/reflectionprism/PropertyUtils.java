@@ -3,6 +3,8 @@ package com.owengriffin.reflectionprism;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -63,6 +65,13 @@ public class PropertyUtils {
             PropertyDescriptor descriptor = new PropertyDescriptor(property, readMethod, writeMethod);
             propertyDescriptors.add(descriptor);
         }
+        Collections.sort(propertyDescriptors, new Comparator<PropertyDescriptor>() {
+
+            public int compare(PropertyDescriptor t, PropertyDescriptor t1) {
+                return t.getName().compareTo(t1.getName());
+            }
+
+        });
         return propertyDescriptors;
     }
 
